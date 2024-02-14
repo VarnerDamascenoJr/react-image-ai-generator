@@ -21,7 +21,7 @@ const ImageGenerator = () => {
         headers: {
           "Content-Type": "application/json",
           Authorization:
-            "Bearer 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",
+            "Bearer key",
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
@@ -34,6 +34,7 @@ const ImageGenerator = () => {
 
     let data = await response.json();
     let data_array = data.data
+
     setImageG(data_array[0].url)
     setLoading(false)
   }
